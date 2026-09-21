@@ -5,8 +5,35 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
+}
+
+/* Envolvente principal para alinhar botão + jogo na vertical */
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Espaço entre o botão e o canvas */
+}
+
+/* Estilização do botão acima do jogo */
+#btn-sensor {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #00a8ff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#btn-sensor:active {
+    transform: scale(0.98);
+    background-color: #0086cc;
 }
 
 .game-container {
@@ -16,6 +43,7 @@ body {
 canvas {
     border: 4px solid #fff;
     background-color: #444; /* Cor do asfalto */
+    display: block;
 }
 
 #scoreBoard {
@@ -24,4 +52,5 @@ canvas {
     left: 10px;
     font-size: 20px;
     font-weight: bold;
+    text-shadow: 1px 1px 2px #000;
 }

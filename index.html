@@ -7,10 +7,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="game-container">
-        <canvas id="gameCanvas" width="400" height="600"></canvas>
-        <div id="scoreBoard">Pontos: <span id="score">0</span></div>
-    </div>
+
+    <main class="main-wrapper">
+        <!-- Botão posicionado acima do jogo -->
+        <button id="btn-sensor" onclick="enableMotionSensor()">
+            Ativar Sensor de Movimento
+        </button>
+
+        <div class="game-container">
+            <canvas id="gameCanvas" width="400" height="600"></canvas>
+            <div id="scoreBoard">Pontos: <span id="score">0</span></div>
+        </div>
+    </main>
+
     <script src="game.js"></script>
 </body>
 </html>
